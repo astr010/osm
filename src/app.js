@@ -556,6 +556,14 @@ $(document).ready(function() {
     gui.Shell.openExternal('http://git.io/B-r8LA');
   });
 
+  $('a[href="#github"]').click(function() {
+    gui.Shell.openExternal('http://git.io/_ayo5A');
+  });
+
+  $('a[href="#bitcoin"]').click(function() {
+    gui.Shell.openExternal('bitcoin:14W72Ktt7zgfoRhg48ftqdUw938y5vBLWr');
+  });
+
   $('#search-form').on('submit', function() {
     $('#images').html('');
     imageSearch($('#query').val());
