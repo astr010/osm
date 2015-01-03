@@ -188,6 +188,14 @@ function showContextMenu(url, from, exifData) {
       }
     });
 
+  var searchOnGoogleItem = new gui.MenuItem(
+    { label: 'Search on Google',
+      icon: 'src/res/menuitem/google.png',
+      click: function() {
+        gui.Shell.openExternal('http://www.google.com/searchbyimage?image_url=' + url);
+      }
+    });
+
   // TODO: Shred images.
   var genderAgeItem = new gui.MenuItem(
     { label: 'Age/Gender (Experimental)',
@@ -371,6 +379,7 @@ function showContextMenu(url, from, exifData) {
   menu.append(flipImageItem);
   menu.append(new gui.MenuItem({ type: 'separator' }));
   menu.append(searchOnTinEyeItem);
+  menu.append(searchOnGoogleItem);
   menu.append(genderAgeItem);
   menu.popup(x, y);
 }
